@@ -1,0 +1,28 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      docker: 18
+
+    commands:
+      - echo Executing Install Phase
+    finally:
+      - echo Executing Install finally
+  pre_build:
+    commands:
+      - echo Executing Pre build Phase
+      - npm install
+    finally:
+      - echo Executing Pre build finally
+  build:
+    commands:
+      - echo Executing  build Phase
+      - npm run build:ci
+    finally:
+      - echo Executing build finally 
+  post_build:
+    commands:
+      - echo Executing Post build Phase
+    finally:
+      - echo Executing Post build finally 
