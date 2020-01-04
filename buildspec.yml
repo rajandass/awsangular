@@ -21,6 +21,14 @@ phases:
       - npm run build:ci
     finally:
       - echo Executing build finally 
+  artifacts:
+    files:
+      - '**/*.html'
+      - '**/*.js'
+      - '**/*.css'
+      - '**/*.ico'
+    discard-paths: yes
+    base-directory: 'dist/awsangular'
   post_build:
     commands:
       - echo Executing Post build Phase
