@@ -28,11 +28,11 @@ phases:
       - echo Executing Post build finally 
 
 
- artifacts:
-    files:
-      - '**/*.html'
-      - '**/*.js'
-      - '**/*.css'
-      - '**/*.css'
-    discard-paths: yes
-    base-directory: 'dist/awsangular'
+artifacts:
+  files:
+    - '**/*.html'
+    - '**/*.js'
+    - '**/*.css'
+    - '**/*.css'
+  discard-paths: yes
+  base-directory: 'dist/awsangular'
