@@ -31,6 +31,7 @@ phases:
   post_build:
     commands:
       - echo Executing Post build Phase
+      - aws s3 sync ./dist/awsangular s3://angular-devops-production --acl 'public-read' --delete
     finally:
       - echo Executing Post build finally 
 
